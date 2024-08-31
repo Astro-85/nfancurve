@@ -18,8 +18,8 @@ hyst="2"
 #  speed will be set
 # You can make the array as big or as small as you require, as long as they
 #  both end up being the same size
-fcurve="25 40 55 70 85" # fan speeds
-tcurve="35 45 55 65 75" # temperatures
+fcurve="30 30 30 40 50 60 70 80 90 100" # fan speeds
+tcurve="40 45 50 55 60 65 70 75 80 85" # temperatures
 
 # This value is used to determine the temperature difference needed to get
 #  the script to check for a new speed to apply. The default of this value
