@@ -41,6 +41,9 @@ There are unofficial AUR packages:
 - Stable: [nfancurve](https://aur.archlinux.org/packages/nfancurve/)<sup>AUR</sup>, maintained by [@ReneHollander](https://github.com/ReneHollander)
 - Git Master: [nfancurve-git](https://aur.archlinux.org/packages/nfancurve-git/)<sup>AUR</sup>, outdated and unmaintained
 
+## Using crontab
+In a terminal run 'sudo crontab -e' and add the line '@reboot sleep 60 && /home/andrew/Hardware/nfancurve/temp.sh'
+
 ## Using the systemd service
 Ensure the script and the config paths are correct.
 Move or copy the nfancurve.service file to /etc/systemd/user/nfancurve.service then enable and start the service with:
