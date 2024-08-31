@@ -266,9 +266,19 @@ else
 	check_diff1="$force_check"; check_diff2="$force_check"
 fi
 
-set_fan_control "$num_gpus_loop" "1"
-
-if [ "$num_gpus" -eq "1" ] && [ "$num_fans" -eq "1" ]; then
+if [ "$single_fan" -eq "1" ]; then
+	$gpu_cmd -a [gpu:"$default_gpu"]/GPUFanControlState="1" $display
+	prf "Started process for 1 GPU and 1 Fan (single fan mode)"
+	fan="$default_fan"
+	set_stuff
+	while true; do
+		arr="$old_t"; n="$fan"; re_elem; ot="$elem"
+		arr="$old_s"; n="$fan"; re_elem; cur_spd="$elem"
+		loop_cmds
+		sleep "$sleep_time"
+	done
+elif [ "$num_gpus" -eq "1" ] && [ "$num_fans" -eq "1" ]; then
+	set_fan_control "$num_gpus_loop" "1"
 	prf "Started process for 1 GPU and 1 Fan"
 	fan="$default_fan"
 	set_stuff
@@ -279,6 +289,7 @@ if [ "$num_gpus" -eq "1" ] && [ "$num_fans" -eq "1" ]; then
 		sleep "$sleep_time"
 	done
 else
+	set_fan_control "$num_gpus_loop" "1"
 	prf "Started process for n-GPUs and n-Fans"
 	while true; do
 		fan=0
