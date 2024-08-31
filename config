@@ -38,9 +38,11 @@ tcurve2="35 45 55 65 75"
 which_curve="1 2 1 2"
 
 # Only used for single-fan operation. If you have more than one gpu/fan but
-#  only want to control one of them, select which one here. Otherwise there
-#  is no need to change this setting.
-default_fan="0"
+#  only want to control one of them, set single_fan to 1 and select which fan
+#  as default. Otherwise there is no need to change this setting.
+single_fan="1"
+default_gpu="1"
+default_fan="2"
 
 # Similar to which_curve, but instead lets the script know which of the GPU's
 #  has which fan. i.e. element 0 in the array being set to 0 means that fan 0
