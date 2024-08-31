@@ -4,7 +4,7 @@ After=graphical-session.target
 Requires=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/nfancurve -c /etc/nfancurve.conf
+ExecStart=/home/andrew/Hardware/nfancurve/temp.sh -c /home/andrew/Hardware/nfancurve/config
 KillSignal=SIGINT
 
 [Install]
