@@ -1,10 +1,12 @@
 [Unit]
-Description=Nfancurve service
+Description=nfancurve service for shell script
 After=graphical-session.target
 Requires=graphical-session.target
 
 [Service]
 ExecStart=/home/andrew/Hardware/nfancurve/temp.sh -c /home/andrew/Hardware/nfancurve/config
+StandardOutput=file:/home/andrew/Hardware/nfancurve/stdout.log
+StandardError=file:/home/andrew/Hardware/nfancurve/stderr.log
 KillSignal=SIGINT
 
 [Install]

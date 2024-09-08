@@ -43,7 +43,7 @@ There are unofficial AUR packages:
 
 ## Using the systemd service
 Ensure the script and the config paths are correct.
-Copy or symlink the nfancurve.service file to /etc/systemd/user/nfancurve.service then enable and start the service with:
+Move or copy the nfancurve.service file to /etc/systemd/user/nfancurve.service then enable and start the service with:
 
     systemctl --user daemon-reload
     systemctl --user start nfancurve.service

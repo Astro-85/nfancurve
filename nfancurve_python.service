@@ -1,0 +1,13 @@
+[Unit]
+Description=nfancurve service for python script
+After=default.target
+Requires=default.target
+
+[Service]
+ExecStart=/home/andrew/miniconda3/envs/nfancurve/bin/python /home/andrew/Hardware/nfancurve/nfancurve.py
+StandardOutput=file:/home/andrew/Hardware/nfancurve/stdout.log
+StandardError=file:/home/andrew/Hardware/nfancurve/stderr.log
+KillSignal=SIGINT
+
+[Install]
+WantedBy=default.target
