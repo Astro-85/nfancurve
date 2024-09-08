@@ -25,7 +25,7 @@ nfancurve
 
 ### git
 - Choose a folder you want to download/install the script in
-- `git clone https://github.com/nan0s7/nfancurve`
+- `git clone https://github.com/Astro-85/nfancurve`
 - Follow the last two steps under the **GitHub** guide area
 
 ## Using the systemd service
@@ -51,4 +51,4 @@ Don't forget to reload and reenable the service:
     systemctl reenable --user nfancurve.service
 
 ### Using the python script
-On headless servers or Wayland systems, it might be easier to use @AlexKordic's python script. Use an enviroment with pynvml installed to run `nfancurve.py`. This can also be automated with systemd.
+On headless servers or Wayland systems, it might be easier to use @AlexKordic 's python script. Use an enviroment with pynvml installed to run `nfancurve.py`. This can also be automated with systemd.
